@@ -1,5 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+
+// the below function is used to identify which license is used and denote it with the approprite badge. when run the application will iterate through the provided licenses to find the correct one, if no license is found the application will return no license.
 function renderLicenseBadge(license) {
   if (license === 'MIT') {
     return '[MIT](https://img.shields.io/badge/License-MIT-green)';
@@ -16,6 +18,9 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
+
+// the below function is used to identify which license is used and provide the link containing the licensing information. when run the application will iterate through the provided licenses to find the correct one, if no license is found the application will return no license.
+
 function renderLicenseLink(license) {
   if (license === 'MIT') {
     return '[MIT](https://opensource.org/license/mit)';
@@ -32,7 +37,11 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license !== 'No License') {
+    return 'The application is covered under the following license: '
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
